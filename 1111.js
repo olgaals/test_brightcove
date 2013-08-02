@@ -3,7 +3,7 @@
     
     function onPlayerReady() {
         videoPlayer.addEventListener(brightcove.api.events.MediaEvent.BEGIN, mediaBeginEventHandler);
-        videoPlayer.addEventListener(brightcove.api.events.MediaEvent.PLAY, mediaEventHandler);
+        videoPlayer.addEventListener(brightcove.api.events.MediaEvent.PLAY, mediaPlayEventHandler);
         videoPlayer.addEventListener(brightcove.api.events.MediaEvent.CHANGE, mediaEventHandler);
         videoPlayer.addEventListener(brightcove.api.events.MediaEvent.STOP, mediaEventHandler);
         videoPlayer.addEventListener(brightcove.api.events.MediaEvent.SEEK_NOTIFY, mediaEventHandler);
@@ -18,6 +18,10 @@
         mediaEventHandler(pEvent);
         showCurrentVideo();
         showCurrentRendition();
+        alert(document.getElementById('bcVideo').hasAttribute("controls"));
+    }
+    
+    function mediaPlayEventHandler(){
         alert(document.getElementById('bcVideo').hasAttribute("controls"));
     }
 
