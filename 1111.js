@@ -18,6 +18,7 @@
         mediaEventHandler(pEvent);
         showCurrentVideo();
         showCurrentRendition();
+        document.getElementById('bcVideo').removeAttribute("controls");
     }
 
     function mediaEventHandler(pEvent) {
