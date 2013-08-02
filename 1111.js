@@ -18,7 +18,7 @@
         mediaEventHandler(pEvent);
         showCurrentVideo();
         showCurrentRendition();
-        document.getElementById('bcVideo').removeAttribute("controls");
+        alert(document.getElementById('bcVideo').hasAttribute("controls"));
     }
 
     function mediaEventHandler(pEvent) {
