@@ -18,7 +18,7 @@
         mediaEventHandler(pEvent);
         showCurrentVideo();
         showCurrentRendition();
-        alert(document.getElementById('bcVideo').hasAttribute("controls"));
+        setTimeout(alert(document.getElementById('bcVideo').hasAttribute("controls")), 500);
     }
     
     function mediaPlayEventHandler(){
