@@ -9,4 +9,7 @@
     if(experience.getReady()==true){
         console.log("ready");
     }
+    function onPlayerReady(){
+        console.log("ready!!!!");
+    }
 }());
