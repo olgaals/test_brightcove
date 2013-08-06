@@ -49,9 +49,6 @@
     player = brightcove.api.getExperience();
     videoPlayer = player.getModule(brightcove.api.modules.APIModules.VIDEO_PLAYER);
     experience = player.getModule(brightcove.api.modules.APIModules.EXPERIENCE);
-    element = document.getElementById('$bc13');
-        element.parentNode.removeChild(element);
-        $('.vjs-controls').remove();
     if (experience.getEnabled()) {
         onPlayerReady();
     } else {
