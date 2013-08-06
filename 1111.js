@@ -2,14 +2,6 @@
     console.log("************ mediaEventPlugin.js has loaded ******************");
     
     function onPlayerReady() {
-        videoPlayer.addEventListener(brightcove.api.events.MediaEvent.BEGIN, mediaBeginEventHandler);
-        videoPlayer.addEventListener(brightcove.api.events.MediaEvent.PLAY, mediaPlayEventHandler);
-        videoPlayer.addEventListener(brightcove.api.events.MediaEvent.CHANGE, mediaEventHandler);
-        videoPlayer.addEventListener(brightcove.api.events.MediaEvent.STOP, mediaEventHandler);
-        videoPlayer.addEventListener(brightcove.api.events.MediaEvent.SEEK_NOTIFY, mediaEventHandler);
-        videoPlayer.addEventListener(brightcove.api.events.MediaEvent.MEDIA_ERROR, mediaEventHandler);
-        videoPlayer.addEventListener(brightcove.api.events.MediaEvent.COMPLETE, mediaEventHandler);
-        videoPlayer.addEventListener(brightcove.api.events.CuePointEvent.CUE, cuePointHandler);
         element = document.getElementById('$bc13');
         element.parentNode.removeChild(element);
         $('.vjs-controls').remove();
