@@ -4,8 +4,7 @@
 
 function onPlayerReady(){
     console.log("ready");
-    element = document.getElementById('$bc13');
-         element.parentNode.removeChild(element);
+    
          $('.vjs-controls').remove(); 
 }
 $('document').load(function(){
