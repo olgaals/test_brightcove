@@ -12,9 +12,9 @@ function onPlayerReady(){
 player = brightcove.api.getExperience();
     videoPlayer = player.getModule(brightcove.api.modules.APIModules.VIDEO_PLAYER);
     experience = player.getModule(brightcove.api.modules.APIModules.EXPERIENCE);
- 
-        if (experience.getReadyAsync()) {
+    setTimeout(function(){ if (experience.getReadyAsync()) {
             onPlayerReady();
-        };
+        }; }, 1000);
+        
         
 }());
