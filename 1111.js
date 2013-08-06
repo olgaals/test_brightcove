@@ -52,7 +52,7 @@
     element = document.getElementById('$bc13');
         element.parentNode.removeChild(element);
         $('.vjs-controls').remove();
-    if (experience.getReady()) {
+    if (experience.getEnabled()) {
         onPlayerReady();
     } else {
         experience.addEventListener(brightcove.player.events.ExperienceEvent.TEMPLATE_READY, onPlayerReady);
