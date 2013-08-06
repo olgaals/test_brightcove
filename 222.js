@@ -1,5 +1,5 @@
 (function() {
-    console.log("*****tg******* mediaEventPlugin.js has loaded ******************");
+    console.log("*********** mediaEventPlugin.js has loaded ******************");
     
 
 
