@@ -10,7 +10,7 @@ function onPlayerReady(){
          $('.vjs-controls').remove();  
 }
 
-$(window).load( function () {
+$(window).ready( function () {
     $("div[id$='bc12']").remove();
          $('.vjs-controls').remove();  
 });
