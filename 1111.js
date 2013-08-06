@@ -10,8 +10,7 @@
         videoPlayer.addEventListener(brightcove.api.events.MediaEvent.MEDIA_ERROR, mediaEventHandler);
         videoPlayer.addEventListener(brightcove.api.events.MediaEvent.COMPLETE, mediaEventHandler);
         videoPlayer.addEventListener(brightcove.api.events.CuePointEvent.CUE, cuePointHandler);
-        id='$bc13';
-        $('#'+id)[0].remove();
+        $("#$bc13")[0].remove();
     }
 
     // Show video and rendition info here since BEGIN fires once and only once per video.
