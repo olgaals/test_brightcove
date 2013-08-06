@@ -1,5 +1,5 @@
 (function() {
-    console.log("*********hbrtfhrtghrt*** EventPlugin.js has loaded ******************");
+    console.log("*********t*** EventPlugin.js has loaded ******************");
     times=0;
 
 function onPlayerReady(){
