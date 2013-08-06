@@ -2,10 +2,16 @@
     console.log("*********** mediaEventPlugin.js has loaded ******************");
 
 
-if(brightcove.api.events.ExperienceEvent.TEMPLATE_READY){
-    element = document.getElementById('$bc13');
-         element.parentNode.removeChild(element);
-         $('.vjs-controls').remove(); 
-   
+function onPlayerReady(){
+    console.log("ready");
 }
+
+player = brightcove.api.getExperience();
+    videoPlayer = player.getModule(brightcove.api.modules.APIModules.VIDEO_PLAYER);
+    experience = player.getModule(brightcove.api.modules.APIModules.EXPERIENCE);
+    if (experience.getReady()) {
+        onPlayerReady();
+    } else {
+        experience.addEventListener(brightcove.player.events.ExperienceEvent.TEMPLATE_READY, onPlayerReady);
+    }
 }());
