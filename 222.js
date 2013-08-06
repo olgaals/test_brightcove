@@ -1,6 +1,6 @@
 (function() {
     console.log("*********** mediaEventPlugin.js has loaded ******************");
-
+    var myTemplateLoaded, onTemplateReady;
    myTemplateLoaded = function (experienceID) {
     console.log("loaded");
     player = brightcove.api.getExperience(experienceID);
