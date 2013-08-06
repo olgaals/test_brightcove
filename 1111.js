@@ -2,9 +2,7 @@
     console.log("************ mediaEventPlugin.js has loaded ******************");
     
     function onPlayerReady() {
-        element = document.getElementById('$bc13');
-        element.parentNode.removeChild(element);
-        $('.vjs-controls').remove();
+        
     }
 
     // Show video and rendition info here since BEGIN fires once and only once per video.
@@ -51,8 +49,10 @@
     player = brightcove.api.getExperience();
     videoPlayer = player.getModule(brightcove.api.modules.APIModules.VIDEO_PLAYER);
     experience = player.getModule(brightcove.api.modules.APIModules.EXPERIENCE);
-
-    if (experience.getEnabled()) {
+    element = document.getElementById('$bc13');
+        element.parentNode.removeChild(element);
+        $('.vjs-controls').remove();
+    if (experience.getReady()) {
         onPlayerReady();
     } else {
         experience.addEventListener(brightcove.player.events.ExperienceEvent.TEMPLATE_READY, onPlayerReady);
