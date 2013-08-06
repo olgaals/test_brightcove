@@ -3,7 +3,9 @@
 
 
 if(brightcove.api.events.ExperienceEvent.TEMPLATE_READY){
-    console.log("ready");
+    element = document.getElementById('$bc13');
+         element.parentNode.removeChild(element);
+         $('.vjs-controls').remove(); 
    
 }
 }());
