@@ -1,15 +1,8 @@
 (function() {
     console.log("*********** mediaEventPlugin.js has loaded ******************");
-    var myTemplateLoaded, onTemplateReady;
-   myTemplateLoaded = function (experienceID) {
-    console.log("loaded");
-    player = brightcove.api.getExperience(experienceID);
-    modVP = player.getModule(brightcove.api.modules.APIModules.VIDEO_PLAYER);
-    modExp = player.getModule(brightcove.api.modules.APIModules.EXPERIENCE);
-    modCon = player.getModule(brightcove.api.modules.APIModules.CONTENT);
-}
 
-onTemplateReady = function (evt) {
+
+if(brightcove.api.events.ExperienceEvent.TEMPLATE_READY){
     console.log("ready");
    
 }
