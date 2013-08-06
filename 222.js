@@ -1,5 +1,5 @@
 (function() {
-    console.log("*********** mediaEventPlugin.js has loaded ******************");
+    console.log("****regfrefrefre******* mediaEventPlugin.js has loaded ******************");
 
 
 function onPlayerReady(){
