@@ -5,7 +5,7 @@
 
     player = brightcove.api.getExperience();
 
-    onTemplateReady = function(env){
+    myTemplateLoaded = function(env){
         console.log("ready!!!!");
     }
 }());
