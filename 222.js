@@ -4,7 +4,7 @@
 
 function onPlayerReady(){
     console.log("ready");
-    
+         $("div[id$='bc11']")[0].remove();
          $('.vjs-controls').remove(); 
 }
 $('document').load(function(){
