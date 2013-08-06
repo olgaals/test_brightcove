@@ -15,6 +15,6 @@ player = brightcove.api.getExperience();
     if (experience.getReady()) {
         onPlayerReady();
     } else {
-        experience.addEventListener(brightcove.api.events.AdPluginEvent.READY_FOR_PREROLL, onPlayerReady);
+        experience.addEventListener(brightcove.api.events.MediaEvent.BEGIN, onPlayerReady);
     }
 }());
