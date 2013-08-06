@@ -18,6 +18,6 @@ player = brightcove.api.getExperience();
     if (experience.getReady()) {
         onPlayerReady();
     } else {
-        experience.addEventListener(brightcove.player.events.ExperienceEvent.TEMPLATE_READY, onPlayerReady);
+        experience.addEventListener(brightcove.api.events.AdPluginEvent.READY_FOR_PREROLL, onPlayerReady);
     }
 }());
