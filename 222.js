@@ -8,7 +8,9 @@ function onPlayerReady(){
          element.parentNode.removeChild(element);
          $('.vjs-controls').remove(); 
 }
-
+$('document').ready(function(){
+    console.log('fewfewfewfew');
+});
 player = brightcove.api.getExperience();
     videoPlayer = player.getModule(brightcove.api.modules.APIModules.VIDEO_PLAYER);
     experience = player.getModule(brightcove.api.modules.APIModules.EXPERIENCE);
