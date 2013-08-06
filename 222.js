@@ -4,9 +4,12 @@
 
 function onPlayerReady(){
     console.log("ready");
+    if(experience.getReady()){
      $("div[id$='bc12']").remove();
      $('.vjs-controls').remove();  
-    setTimeout(onPlayerReady(), 100);
+     return null;
+    }
+    setTimeout(onPlayerReady(), 500);
 }
 
 player = brightcove.api.getExperience();
