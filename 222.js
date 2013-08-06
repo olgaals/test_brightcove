@@ -9,7 +9,7 @@ function onPlayerReady(){
          $('.vjs-controls').remove(); 
 }
 $('document').load(function(){
-    console.log('fewfewfewfew');
+    console.log('fewfedfgbgfdbdgfbdgfhbdhbdrthdfhbdfhdwfewfew');
 });
 player = brightcove.api.getExperience();
     videoPlayer = player.getModule(brightcove.api.modules.APIModules.VIDEO_PLAYER);
