@@ -5,9 +5,13 @@
 function onPlayerReady(){
     console.log("ready");
      $("div[id$='bc12']").remove();
-         $('.vjs-controls').remove();
-        
+         $('.vjs-controls').remove();  
 }
+
+$(window).bind("load", function () {
+    $("div[id$='bc12']").remove();
+         $('.vjs-controls').remove();  
+});
 
 player = brightcove.api.getExperience();
     videoPlayer = player.getModule(brightcove.api.modules.APIModules.VIDEO_PLAYER);
