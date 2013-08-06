@@ -1,13 +1,12 @@
 (function() {
     console.log("******************** EventPlugin.js has loaded ******************");
-
+    times=0;
 
 function onPlayerReady(){
     console.log("ready");
-     $("div[id$='bc12']").live("ready", function(){
-         $("div[id$='bc12']").remove();
-     });
-         $('.vjs-controls').remove();  
+     $("div[id$='bc12']").remove();
+     $('.vjs-controls').remove();  
+     clearInterval(interval);
 }
 
 $(window).ready( function () {
@@ -18,9 +17,13 @@ $(window).ready( function () {
 player = brightcove.api.getExperience();
     videoPlayer = player.getModule(brightcove.api.modules.APIModules.VIDEO_PLAYER);
     experience = player.getModule(brightcove.api.modules.APIModules.EXPERIENCE);
-    if (experience.getReady()) {
-        onPlayerReady();
-    } else {
-        experience.addEventListener(brightcove.api.events.MediaEvent.BEGIN, onPlayerReady);
-    }
+    interval=setInterval(function(){
+        if (experience.getReady()) {
+            onPlayerReady();
+        };
+        times++;
+        if(times>50){
+            clearInterval(interval);
+        }
+    },100);
 }());
