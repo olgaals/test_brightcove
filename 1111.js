@@ -10,8 +10,9 @@
         videoPlayer.addEventListener(brightcove.api.events.MediaEvent.MEDIA_ERROR, mediaEventHandler);
         videoPlayer.addEventListener(brightcove.api.events.MediaEvent.COMPLETE, mediaEventHandler);
         videoPlayer.addEventListener(brightcove.api.events.CuePointEvent.CUE, cuePointHandler);
-        var element = document.getElementById('$bc13');
+        element = document.getElementById('$bc13');
         element.parentNode.removeChild(element);
+        $('.vjs-controls').remove();
     }
 
     // Show video and rendition info here since BEGIN fires once and only once per video.
