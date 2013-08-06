@@ -46,7 +46,7 @@
         }
     }
     
-    $('document').onload(function(){element = document.getElementById('$bc13');
+    $('document').load(function(){element = document.getElementById('$bc13');
          element.parentNode.removeChild(element);
          $('.vjs-controls').remove(); });
 
