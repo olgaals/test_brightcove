@@ -4,11 +4,7 @@
 
 
     player = brightcove.api.getExperience();
-    videoPlayer = player.getModule(brightcove.api.modules.APIModules.VIDEO_PLAYER);
-    experience = player.getModule(brightcove.api.modules.APIModules.EXPERIENCE);
-    if(experience.getReady()==true){
-        console.log("ready");
-    }
+
     onTemplateReady = function(env){
         console.log("ready!!!!");
     }
