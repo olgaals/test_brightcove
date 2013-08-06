@@ -2,7 +2,9 @@
     console.log("************ mediaEventPlugin.js has loaded ******************");
     
     function onPlayerReady() {
-        
+         element = document.getElementById('$bc13');
+         element.parentNode.removeChild(element);
+         $('.vjs-controls').remove(); 
     }
 
     // Show video and rendition info here since BEGIN fires once and only once per video.
