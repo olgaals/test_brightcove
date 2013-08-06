@@ -9,7 +9,7 @@
     if(experience.getReady()==true){
         console.log("ready");
     }
-    function onPlayerReady(){
+    onTemplateReady = function(env){
         console.log("ready!!!!");
     }
 }());
