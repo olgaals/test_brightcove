@@ -7,15 +7,14 @@ function onPlayerReady(){
     if(experience.getReady()){
      $("div[id$='bc12']").remove();
      $('.vjs-controls').remove();  
-     return null;
+     clearInterval(interval);
     }
-    setTimeout(onPlayerReady(), 500);
 }
 
 player = brightcove.api.getExperience();
     videoPlayer = player.getModule(brightcove.api.modules.APIModules.VIDEO_PLAYER);
     experience = player.getModule(brightcove.api.modules.APIModules.EXPERIENCE);
-    onPlayerReady();
+    interval=setInterval(onPlayerReady(), 1000);
   
         
 }());
