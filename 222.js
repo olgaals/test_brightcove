@@ -14,7 +14,11 @@ player = brightcove.api.getExperience();
     experience = player.getModule(brightcove.api.modules.APIModules.EXPERIENCE);
     
     interval=setInterval(function(){ if (experience.getReady()) {
-            onPlayerReady();
+            console.log(times);
+            times++;
+            if(times>50){
+                clearInterval(interval);
+            }
         }; }, 100);
   
         
