@@ -60,7 +60,7 @@
     videoPlayer = player.getModule(brightcove.api.modules.APIModules.VIDEO_PLAYER);
     experience = player.getModule(brightcove.api.modules.APIModules.EXPERIENCE);
 
-    if (experience.getReady()) {
+    if (experience.getEnabled()) {
         onPlayerReady();
     } else {
         experience.addEventListener(brightcove.player.events.ExperienceEvent.TEMPLATE_READY, onPlayerReady);
