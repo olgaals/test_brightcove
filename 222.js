@@ -1,5 +1,5 @@
 (function() {
-    console.log("****rertgrtrtgt*** EventPlugin.js has loaded ******************");
+    console.log("****r** EventPlugin.js has loaded ******************");
     times=0;
     deleted=0;
 
