@@ -26,16 +26,16 @@ player = brightcove.api.getExperience();
     
     window.onload=function(){
 
-        alert("DOM loaded!")
+        console.log("DOM loaded1!")
     };
     $(document).ready(function() {
-         alert("DOM loaded!")
+         console.log("DOM loaded2!")
     });
 
 // or
 
 $(function() {
-   alert("DOM loaded!")
+   console.log("DOM loaded3!")
 });
 
         
