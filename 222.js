@@ -23,6 +23,20 @@ player = brightcove.api.getExperience();
     if(experience.getReady()){
         onPlayerReady();
     }
+    
+    window.onload=function(){
+
+        alert("DOM loaded!")
+    };
+    $(document).ready(function() {
+         alert("DOM loaded!")
+    });
+
+// or
+
+$(function() {
+   alert("DOM loaded!")
+});
 
         
 }());
