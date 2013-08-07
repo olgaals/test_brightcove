@@ -6,12 +6,10 @@
  onPlayerReady=function(){
     console.log("ready");
     if($("div[id$='bc12']").length>0){
-        $("div[id$='bc12']").remove();
-        deleted++;
+     
     }
     if($("div[id$='bc12']").length>0){    
-        $('.vjs-controls').remove();  
-        deleted++;
+
     }
      
     
