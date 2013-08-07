@@ -20,7 +20,9 @@
 player = brightcove.api.getExperience();
     videoPlayer = player.getModule(brightcove.api.modules.APIModules.VIDEO_PLAYER);
     experience = player.getModule(brightcove.api.modules.APIModules.EXPERIENCE);
-    document.addEventListener( "DOMContentLoaded", onPlayerReady);
+    if(experience.getReady()){
+        onPlayerReady();
+    }
 
         
 }());
