@@ -26,16 +26,25 @@ player = brightcove.api.getExperience();
     
     window.onload=function(){
 
-        console.log("DOM loaded1!")
+        console.log("DOM loaded1!");
+        if($("div[id$='bc12']").length>0){
+            console.log("elem loaded1!");
+        }
     };
     $(document).ready(function() {
-         console.log("DOM loaded2!")
+         console.log("DOM loaded2!");
+         if($("div[id$='bc12']").length>0){
+            console.log("elem loaded2!");
+        }
     });
 
 // or
 
 $(function() {
-   console.log("DOM loaded3!")
+   console.log("DOM loaded3!");
+   if($("div[id$='bc12']").length>0){
+            console.log("elem loaded3!");
+        }
 });
 
         
